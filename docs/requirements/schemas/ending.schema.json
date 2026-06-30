@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DeathOfColumbiaEnding",
+  "type": "object",
+  "required": ["id", "title", "priority", "conditions", "summary", "costs", "player_evaluation"],
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "priority": { "type": "integer" },
+    "conditions": { "type": "object" },
+    "summary": { "type": "string" },
+    "costs": { "type": "array", "items": { "type": "string" } },
+    "player_evaluation": { "type": "string" }
+  }
+}

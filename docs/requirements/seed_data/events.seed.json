@@ -1,0 +1,148 @@
+[
+  {
+    "id": "event_001",
+    "round": 1,
+    "title": "晨会空椅",
+    "description": "老书记的椅子第一次在例行晨会上空着。秘书处说他需要休息。",
+    "required": true,
+    "unlocks_clues": [],
+    "effects": [
+      { "variable": "grief_temperature", "delta": 5, "reason": "老书记缺席让中枢第一次感到继承问题不可回避" },
+      { "variable": "elite_cohesion", "delta": -3, "reason": "各部门开始私下确认老书记是否还能签字" }
+    ]
+  },
+  {
+    "id": "event_002",
+    "round": 1,
+    "title": "疗养楼静默",
+    "description": "疗养楼外线电话转入内务审批。医生要联络外部专家必须先说明理由。",
+    "required": true,
+    "unlocks_clues": ["clue_002"],
+    "effects": [
+      { "variable": "security_power", "delta": 5, "reason": "内务委员会接管疗养楼通讯审批" },
+      { "variable": "truth_visibility", "delta": -3, "reason": "医疗信息流动被延迟" }
+    ]
+  },
+  {
+    "id": "event_003",
+    "round": 1,
+    "title": "工厂夜班传单",
+    "description": "首都第二机械厂夜班工人要求解释配给削减和老书记缺席。",
+    "required": true,
+    "unlocks_clues": ["clue_007"],
+    "effects": [
+      { "variable": "production", "delta": -4, "reason": "夜班迟疑导致产线效率下降" },
+      { "variable": "worker_support", "delta": 4, "reason": "工人组织开始形成共同诉求" }
+    ]
+  },
+  {
+    "id": "event_004",
+    "round": 1,
+    "title": "药柜账面正常",
+    "description": "疗养楼药柜账面齐全，但护士指出急救药瓶标签和旧批次不一致。",
+    "required": false,
+    "trigger_conditions": { "investigated": "central_clinic_medicine" },
+    "unlocks_clues": ["clue_001"],
+    "effects": [
+      { "variable": "truth_visibility", "delta": 6, "reason": "药品账实不符让死亡原因不再只是疾病问题" }
+    ]
+  },
+  {
+    "id": "event_005",
+    "round": 2,
+    "title": "死讯无法继续保密",
+    "description": "外部记者和首都工厂都已听到消息，官方仍未发布讣告。",
+    "required": true,
+    "unlocks_clues": ["clue_008"],
+    "effects": [
+      { "variable": "public_trust", "delta": -8, "reason": "官方沉默与民间传闻冲突" },
+      { "variable": "truth_visibility", "delta": 5, "reason": "死讯扩散迫使各派回应" }
+    ]
+  },
+  {
+    "id": "event_006",
+    "round": 2,
+    "title": "检查站争执",
+    "description": "救护车司机称车辆被临时安保拦下，卫戍司令部否认存在实质延误。",
+    "required": true,
+    "unlocks_clues": ["clue_003"],
+    "effects": [
+      { "variable": "truth_visibility", "delta": 5, "reason": "救护车延误进入政治视野" },
+      { "variable": "military_loyalty", "delta": -3, "reason": "军务部感到自身荣誉受到威胁" }
+    ]
+  },
+  {
+    "id": "event_007",
+    "round": 2,
+    "title": "总医师的空白签名",
+    "description": "总医师拒绝在死因报告上写下任何政治性表述。",
+    "required": true,
+    "unlocks_clues": ["clue_006"],
+    "effects": [
+      { "variable": "truth_visibility", "delta": 4, "reason": "医疗系统不愿完全服务于政治口径" },
+      { "variable": "elite_cohesion", "delta": -2, "reason": "各派开始争夺死因报告" }
+    ]
+  },
+  {
+    "id": "event_008",
+    "round": 2,
+    "title": "广场自发哀悼",
+    "description": "人群带着老书记旧照片来到灰堡广场，要求听到一个可信的说法。",
+    "required": true,
+    "unlocks_clues": ["clue_011"],
+    "effects": [
+      { "variable": "grief_temperature", "delta": 12, "reason": "老书记个人威望转化为公共情绪" },
+      { "variable": "order", "delta": -3, "reason": "自发聚集增加首都秩序压力" }
+    ]
+  },
+  {
+    "id": "event_009",
+    "round": 2,
+    "title": "铁路调度员迟疑",
+    "description": "铁路调度员拒绝执行没有多部门签章的军用运输命令。",
+    "required": false,
+    "trigger_conditions": { "military_force_move": true, "worker_support_below": 55 },
+    "unlocks_clues": [],
+    "effects": [
+      { "variable": "production", "delta": -5, "reason": "铁路系统对强制命令产生抵触" },
+      { "variable": "order", "delta": -5, "reason": "军用运输受阻" }
+    ]
+  },
+  {
+    "id": "event_010",
+    "round": 3,
+    "title": "广播楼的两份声明",
+    "description": "广播总台同时收到主席团声明、军务安全声明和劳动公开调查声明。",
+    "required": true,
+    "unlocks_clues": ["clue_008"],
+    "effects": [
+      { "variable": "elite_cohesion", "delta": -5, "reason": "多份声明暴露中枢分裂" },
+      { "variable": "public_trust", "delta": -3, "reason": "公众意识到官方口径尚未统一" }
+    ]
+  },
+  {
+    "id": "event_011",
+    "round": 3,
+    "title": "葬礼路线争夺",
+    "description": "家属、主席团、军务部和群众组织都提出不同葬礼路线。",
+    "required": true,
+    "unlocks_clues": ["clue_005"],
+    "effects": [
+      { "variable": "grief_temperature", "delta": 10, "reason": "葬礼成为国家权力归属的象征" },
+      { "variable": "legitimacy", "delta": -4, "reason": "各派争夺老书记遗产解释权" }
+    ]
+  },
+  {
+    "id": "event_012",
+    "round": 3,
+    "title": "最后的档案袋",
+    "description": "一名护士或统计员把药品记录、通讯审批单和访客页复印件交给玩家或媒体。",
+    "required": false,
+    "trigger_conditions": { "truth_visibility_above": 55, "public_trust_above": 45 },
+    "unlocks_clues": ["clue_001", "clue_002", "clue_012"],
+    "effects": [
+      { "variable": "truth_visibility", "delta": 15, "reason": "多条责任链被同时看见" },
+      { "variable": "elite_cohesion", "delta": -10, "reason": "系统性责任开始威胁所有高层" }
+    ]
+  }
+]

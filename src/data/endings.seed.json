@@ -1,0 +1,74 @@
+[
+  {
+    "id": "player_political_death",
+    "title": "玩家政治死亡",
+    "priority": 1,
+    "conditions": { "player.prestige_lte": 0 },
+    "summary": "玩家失去全部关键支持，被辞职、软禁、拘押或作为替罪羊处理。",
+    "costs": ["玩家退出权力中心", "国家走向由 NPC 剩余力量决定"],
+    "player_evaluation": "失败者、替罪羊或被边缘化的见证人"
+  },
+  {
+    "id": "dual_power_collapse",
+    "title": "双重权力 / 国家裂解",
+    "priority": 2,
+    "conditions": { "order_lte": 30, "elite_cohesion_lte": 30, "production_lte": 35 },
+    "summary": "首都出现多份命令，军务、主席团、劳动系统和内务各自控制一部分国家机器。",
+    "costs": ["配给和交通崩溃", "老书记死因被撕裂成互相指控", "普通人承担最直接代价"],
+    "player_evaluation": "失败调停者、煽动者、幸存者或被裹挟者"
+  },
+  {
+    "id": "interior_purge",
+    "title": "内务整肃",
+    "priority": 3,
+    "conditions": { "security_power_gte": 75, "truth_visibility_lte": 45, "order_gte": 55, "public_trust_lte": 50 },
+    "summary": "内务委员会以保护国家和老书记名誉为名，重构死因叙事并展开整肃。",
+    "costs": ["真相封存", "恐惧成为治理基础", "替罪羊出现"],
+    "player_evaluation": "安全胜利者、合作者或被清洗对象"
+  },
+  {
+    "id": "marshal_protectorate",
+    "title": "元帅护国",
+    "priority": 4,
+    "conditions": { "military_loyalty_gte": 70, "order_gte": 65, "legitimacy_lte": 60 },
+    "summary": "军务部以保护过渡为名掌握首都关键节点，主席团保留形式名义。",
+    "costs": ["群众政治被压缩", "军管成为事实", "检查站责任被淡化"],
+    "player_evaluation": "护国者、被保护的文官或被软禁的反对者"
+  },
+  {
+    "id": "labor_ascendant",
+    "title": "劳动委员会上升",
+    "priority": 5,
+    "conditions": { "worker_support_gte": 70, "production_gte": 55, "public_trust_gte": 55 },
+    "summary": "工厂、铁路、医院和配给站代表进入临时权力安排。",
+    "costs": ["精英团结下降", "外部信用承压", "军务保持戒备"],
+    "player_evaluation": "人民路线推动者、群众盟友或机会主义者"
+  },
+  {
+    "id": "technocratic_reform",
+    "title": "技术官僚改革",
+    "priority": 6,
+    "conditions": { "reform_momentum_gte": 70, "foreign_pressure_gte": 55, "production_lte": 60 },
+    "summary": "计划与外务系统以旧制度过载为由推动紧急供应和信用改革。",
+    "costs": ["普通人担心代价转嫁", "强硬派不满", "劳动系统要求监督"],
+    "player_evaluation": "改革设计者、冷静执行者或以数字遮蔽痛苦的人"
+  },
+  {
+    "id": "provisional_accord",
+    "title": "临时和解 / 人民调查",
+    "priority": 7,
+    "conditions": { "truth_visibility_gte": 70, "public_trust_gte": 65, "elite_cohesion_gte": 55, "order_gte": 50, "worker_support_gte": 55, "military_loyalty_gte": 45 },
+    "summary": "各系统承认老书记之死是系统性事故，成立临时共同委员会和人民调查机制。",
+    "costs": ["每一派都失去遮羞布", "真相带来短期痛苦", "新秩序尚未建立"],
+    "player_evaluation": "调停者、缝合者或临时调查主持人"
+  },
+  {
+    "id": "presidium_continuity",
+    "title": "主席团延续",
+    "priority": 8,
+    "conditions": { "legitimacy_gte": 65, "elite_cohesion_gte": 60, "order_gte": 50, "truth_visibility_lte": 55 },
+    "summary": "主席团主持国葬和过渡会议，各部门在保留自身权力下接受集体领导。",
+    "costs": ["真相部分封存", "工厂和医疗问题被技术性处理", "普通人获得哀悼但未获得充分解释"],
+    "player_evaluation": "程序胜利者、被纳入新秩序者或暂时旁观者"
+  }
+]

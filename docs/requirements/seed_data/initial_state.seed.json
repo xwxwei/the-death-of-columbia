@@ -1,0 +1,37 @@
+{
+  "save_version": 1,
+  "round": 1,
+  "phase": "command",
+  "state": {
+    "legitimacy": 55,
+    "order": 55,
+    "production": 50,
+    "public_trust": 50,
+    "elite_cohesion": 55,
+    "truth_visibility": 10,
+    "military_loyalty": 55,
+    "security_power": 50,
+    "worker_support": 45,
+    "reform_momentum": 40,
+    "foreign_pressure": 45,
+    "grief_temperature": 20
+  },
+  "clues": {
+    "clue_001": { "title": "疗养楼药柜账实不符", "visibility": "hidden" },
+    "clue_002": { "title": "通讯审批单", "visibility": "hidden" },
+    "clue_003": { "title": "检查站通行日志", "visibility": "hidden" },
+    "clue_004": { "title": "老书记最后批注", "visibility": "hidden" },
+    "clue_005": { "title": "女儿私人日记", "visibility": "hidden" },
+    "clue_006": { "title": "总医师未签署的会诊申请", "visibility": "hidden" },
+    "clue_007": { "title": "工厂停工电报", "visibility": "hidden" },
+    "clue_008": { "title": "广播总台两份讣告", "visibility": "hidden" },
+    "clue_009": { "title": "边境急电", "visibility": "hidden" },
+    "clue_010": { "title": "药品采购合同", "visibility": "hidden" },
+    "clue_011": { "title": "护士口述", "visibility": "hidden" },
+    "clue_012": { "title": "被撕掉的访客页", "visibility": "hidden" }
+  },
+  "ap_used": 0,
+  "public_log": [],
+  "secret_log": [],
+  "promises": []
+}

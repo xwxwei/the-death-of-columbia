@@ -1,13 +1,18 @@
-# The Death of Columbia
+# The Death of Columbia / 哥伦比亚之死
 
-A Cloudflare Worker + Vite narrative workbench for testing DeepSeek-generated
-drafts, rewrites, scene expansions, and critique loops.
+A Cloudflare Worker + Vite MVP for a fictional political-crisis narrative RPG.
+The current build runs the first playable story engine: character selection,
+three crisis rounds, player actions, mock NPC agency, event and clue unlocks,
+ending resolution, and an ending dossier.
 
 ## Stack
 
 - React 19 and Vite for the browser UI.
+- TypeScript core engine under `src/core`.
+- Mock NPC and GM adapters under `src/agents`.
+- Data-driven characters, events, endings, and initial state under `src/data`.
 - Cloudflare Workers with static assets for deployment.
-- DeepSeek chat completions through the Worker route `/api/deepseek`.
+- Optional DeepSeek chat completions through `/api/deepseek`.
 
 ## Local setup
 
@@ -16,7 +21,7 @@ pnpm install
 cp .dev.vars.example .dev.vars
 ```
 
-Add your DeepSeek key to `.dev.vars`, then run:
+Add your DeepSeek key to `.dev.vars` if you want to test model calls, then run:
 
 ```bash
 pnpm cf:dev
@@ -28,8 +33,20 @@ For frontend-only iteration:
 pnpm dev
 ```
 
-The frontend-only server does not call the Worker API. Use `pnpm cf:dev` when
-testing DeepSeek requests.
+The MVP game engine runs locally in the browser with mock NPC logic. Use
+`pnpm cf:dev` when testing Worker API requests.
+
+## Tests
+
+```bash
+pnpm typecheck
+pnpm test
+pnpm build
+```
+
+The test suite covers the eight ending acceptance states, full three-round
+runs for all six playable roles, NPC autonomy, promise breach behavior, and
+fictionalization of real-world mapping requests.
 
 ## Cloudflare deployment
 

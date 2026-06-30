@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "cf:dev": "pnpm build && wrangler dev",
     "deploy": "pnpm build && wrangler deploy",
+    "test": "vitest run",
     "typecheck": "tsc -b"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "typescript": "^6.0.3",
+    "vitest": "^4.1.9",
     "wrangler": "^4.105.0"
   },
   "packageManager": "pnpm@11.9.0"

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DeathOfColumbiaCharacter",
+  "type": "object",
+  "required": ["id", "display_name", "role", "playable", "institution", "public_position", "private_motives", "resources", "red_lines", "initial_prestige", "weights"],
+  "properties": {
+    "id": { "type": "string" },
+    "display_name": { "type": "string" },
+    "role": { "type": "string" },
+    "playable": { "type": "boolean" },
+    "institution": { "type": "string" },
+    "public_position": { "type": "string" },
+    "private_motives": { "type": "array", "items": { "type": "string" } },
+    "resources": { "type": "array", "items": { "type": "string" } },
+    "red_lines": { "type": "array", "items": { "type": "string" } },
+    "initial_prestige": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "weights": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0, "maximum": 100 } },
+    "initial_relationships": { "type": "object", "additionalProperties": { "type": "integer", "minimum": -100, "maximum": 100 } }
+  }
+}
